@@ -18,8 +18,11 @@ const orders = [
     1. use the every method to check if every order is paid?
 
  */
+ const isPaid = ( order ) => order.paid === true;
 
-// const isEveryOrderedPaid = orders.every ...
+ const isEveryOrderedPaid = orders.every(isPaid);
+
+ console.log("Was every order paid :" + isEveryOrderedPaid);
 
 
 /*
@@ -27,9 +30,13 @@ const orders = [
     2. use the some method to check if some males (filter) paid for their order
 
  */
+const isMale = ( order ) => order.customer.isMale === true ;
+
+console.log ( "Is there an order thas was paid by a male customer ? " + orders.filter(isMale).some(isPaid) );
 
 /*
 
     3. calculate how much needs to be paid (where paid = false)
 
  */
+
