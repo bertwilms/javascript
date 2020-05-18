@@ -23,10 +23,15 @@ const toCopy = {
     }
 };
 
+console.log("::::::");
+console.log ( toCopy);
 /*
 
     Search the internet for how to do a decent copy... note that objects in objects also need to be copied... otherwise
     their references will still exist and even more unexpected behavior will occur.
 
  */
+console.log(":::::: Copied object ");
+const dstCopy = Object.assign({},toCopy );
 
+console.log ( dstCopy );

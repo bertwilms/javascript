@@ -24,3 +24,8 @@ const maximumSafe = Number.MAX_SAFE_INTEGER;
 
 const integerString = "1234";
 const floatString = "12.34";
+
+console.log ( maximumSafe);
+console.log ( integerString);
+console.log ( floatString);
+console.log ( maximum);

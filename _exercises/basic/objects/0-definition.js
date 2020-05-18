@@ -30,6 +30,9 @@ const Gandalf = {
     }
 };
 
+
+console.log ( "Hoi, my name is " , Gandalf.name, " and .. " , Gandalf.handler(), " and one of my hobbies is ", Gandalf.hobbies[0]);
+console.log ( "all my hobbies are ", Gandalf.hobbies.join(", ") ) ;
 /*
 
     This notation has an interesting feature. Using " " helps to create otherwise illegal keys. Note that you need to use
