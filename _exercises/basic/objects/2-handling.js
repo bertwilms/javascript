@@ -21,18 +21,35 @@ const CharacterMap = {
     1. Display a comma separated list of names on the screen
 
  */
+console.log ( "Characters ") ;
+console.log ( "===========");
+const asName = (item) => item.name ;
+console.log ( Object.values(CharacterMap).map(asName).join ( ", "));
+
 
 /*
 
     2. Get a list of the identifiers of the characters
 
  */
+console.log ( "Identifiers ") ;
+console.log ( "===========");
+//const characterIdentifies = Object.values((CharacterMap));
+console.log (Object.keys(CharacterMap));
+//console.log ( characterIdentifies);
+//console.log ( Object.getOwnPropertyNames(CharacterMap));
+
+
 
 /*
 
     3. Get the names in a comma separated list of every character older than 50
 
  */
+console.log ( "Characters older than 50") ;
+console.log ( "========================") ;
+const isAbove50 = (item) => item.age > 50 ;
+console.log ( Object.values(CharacterMap).filter(isAbove50).map(asName).join ( ", "));
 
 /*
 
@@ -40,4 +57,15 @@ const CharacterMap = {
 
  */
 
+console.log ( "\nSearch by partial string") ;
+console.log ( "========================") ;
+
+const searchByName = function ( searchString) {
+const hasString = (item) => item.name.indexOf(searchString) !== -1 ;
+    return ( Object.values(CharacterMap).filter(hasString).map(asName).join(", ")) ;
+}
+
+console.log ( searchByName("Fro")) ;
+console.log ( searchByName("Ar")) ;
+console.log ( searchByName("orn")) ;
 
