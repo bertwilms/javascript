@@ -11,14 +11,24 @@
 
 
 const calculator = function (x, y) {
+  const add = () => x + y ;
+  const subtract = () => x - y ;
+  const multiply = () => x * y ;
+  const divide = () => x / y ;
 
-    return {};
+  return {
+      add,
+      subtract,
+      multiply,
+      divide
+  };
 };
 
-// console.log('Add: ', calculator(2, 1).add());
-// console.log('Subtract: ', calculator(2, 1).subtract());
-// console.log('Multiply: ', calculator(2, 1).multiply());
-// console.log('Divide: ', calculator(2, 1).divide());
+ const calc = calculator(7,4);
+ console.log('Add: ', calc.add());
+ console.log('Subtract: ', calc.subtract());
+ console.log('Multiply: ', calc.multiply());
+ console.log('Divide: ', calc.divide());
 
 /*
 
