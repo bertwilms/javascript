@@ -36,7 +36,10 @@ console.log  ( " 2. Display the full names of all the males that are over 30") ;
 const isAbove30 = (item) => item.age > 30 ;
 const isMale = (item) => item.isMale ;
 const asFullName = (person) => person.name.last + " " + person.name.first ;
-console.log ( customers.filter(isAbove30 && isMale).map(asFullName))  ;
+console.log ( customers
+                .filter(isAbove30)
+                .filter(isMale)
+                .map(asFullName))  ;
 
 /*
 
@@ -60,8 +63,12 @@ console.log ( "4. Are there some females with blue eyes?", customers.some(hasblu
  */
 console.log ( "5. Get customers over 25 that are male and display them in one object as { _id: name }");
 const isAbove25 = ( customer) => customer.age > 25 ;
-const customerObject2 = customers.filter(isAbove25 && isMale).reduce((obj, customer) => {
-     obj[customer._id] = customer.name.last + " " + customer.name.first ;
+const customerObject2 =
+    customers
+        .filter(isAbove25)
+        .filter(isMale)
+        .reduce((obj, customer) => {
+            obj[customer._id] = customer.name.last + " " + customer.name.first ;
      return obj ;
  },{}) ;
 
