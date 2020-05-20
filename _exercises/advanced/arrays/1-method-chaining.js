@@ -12,12 +12,21 @@ const episodes = require('../../../data/south-park')._embedded.episodes;
 
  */
 
+//  const getAllEpisodesBySeason = ( season ) => episodes.filter(function( episode) {
+//      return episode.season === season;
+//  });
+  // You don't have to write function (... just use a lambda
+  const getAllEpisodesBySeason = ( season ) => episodes.filter((episode) => episode.season === season);
+
+  console.log ( getAllEpisodesBySeason ( 1 )) ;
 /*
 
     2. create a function that has as parameter a season and return all the episodes from that season but only the names
 
  */
-
+  const asName = ( episode ) => episode.name ;
+  console.log ("only the names ") ;
+  console.log ( getAllEpisodesBySeason(1).map(asName));
 /*
 
     3. create a function that has as parameters a season and a partial string that returns every episode of that season
