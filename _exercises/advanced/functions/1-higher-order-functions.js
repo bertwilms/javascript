@@ -31,6 +31,10 @@
 
  */
 
+function fun ( value ) {
+    return const
+}
+
 /*
 
     2. Create an object or class that holds a list of listeners that can be called:
